@@ -10,8 +10,13 @@ interface PokemonsList {
   }[];
 }
 
-export async function getPokemons(): Promise<PokemonsList> {
-  const response = await axios.get(`${API_URL}/pokemon?limit=100&offset=0`);
+export async function getPokemons(
+  offset = 0,
+  limit = 20
+): Promise<PokemonsList> {
+  const response = await axios.get(
+    `${API_URL}/pokemon?limit=${limit}&offset=${offset}`
+  );
   return response.data;
 }
 
