@@ -3,7 +3,7 @@ import { Navbar } from "../components";
 
 export default function MainLayout() {
   return (
-    <div>
+    <div className="h-full">
       <Navbar />
       <Outlet />
     </div>

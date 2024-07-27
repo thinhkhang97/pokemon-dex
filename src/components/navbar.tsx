@@ -19,6 +19,10 @@ export function Navbar() {
     navigate("/pokemons");
   };
 
+  const gotoGames = () => {
+    navigate("/games");
+  };
+
   return (
     <div className="px-6 bg-red-500 flex justify-between items-center">
       <img
@@ -43,6 +47,12 @@ export function Navbar() {
               {favoriteList.length}
             </span>
           )}
+        </li>
+        <li
+          onClick={gotoGames}
+          className="text-white hover:text-red-200 hover:cursor-pointer"
+        >
+          Games
         </li>
       </ul>
     </div>
